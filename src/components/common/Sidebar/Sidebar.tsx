@@ -43,11 +43,6 @@ const sidebarItems: SidebarItemType[] = [
         content: "Notifications",
     },
     {
-        href: "/setting",
-        icon: <AiOutlineSetting />,
-        content: "Setting",
-    },
-    {
         href: "/profile",
         icon: <AiOutlineUser />,
         content: "Profile",
@@ -79,6 +74,7 @@ const items: MenuProps["items"] = [
     },
     {
         type: "divider",
+        key: "2",
     },
     {
         label: (
@@ -94,7 +90,7 @@ const items: MenuProps["items"] = [
 function Sidebar() {
     return (
         <aside className="h-screen p-4 border-r-2 border-secondary">
-            <div className="flex flex-col justify-between h-full">
+            <div id="sidebar" className="flex flex-col justify-between h-full">
                 <div>
                     <Link href="/">
                         <Image className="w-[70px] mb-2" src={logoImg} alt="" />
@@ -109,13 +105,12 @@ function Sidebar() {
                         </SidebarItem>
                     ))}
                 </div>
-                <Dropdown placement="top" menu={{ items }} trigger={["click"]}>
-                    <SidebarItem
-                        onClick={(e) => e.preventDefault()}
-                        icon={<AiOutlineMenu />}
-                    >
-                        More
-                    </SidebarItem>
+                <Dropdown
+                    placement="topLeft"
+                    menu={{ items }}
+                    trigger={["click"]}
+                >
+                    <SidebarItem icon={<AiOutlineMenu />}>More</SidebarItem>
                 </Dropdown>
             </div>
         </aside>
