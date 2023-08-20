@@ -12,6 +12,21 @@ body {
     height: 100vh;
 }
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 9px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+::-webkit-scrollbar-track {
+    background-color: #ddd;
+}
+
 /* Custom */
 .tw-sidebar-item {
     @apply flex items-center p-3 mb-2 w-full rounded-xl hover:bg-secondary hover:text-black text-black;
@@ -19,4 +34,8 @@ body {
 
 .tw-menu-dropdown-item {
     @apply flex items-center py-1 text-lg;
+}
+
+.tw-fixed-sidebar {
+    @apply h-screen sticky top-0;
 }

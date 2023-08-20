@@ -30,7 +30,7 @@ const sidebarItems: SidebarItemType[] = [
     {
         href: "/search",
         icon: <FiSearch />,
-        content: "Search",
+        content: "Explore",
     },
     {
         href: "/messages",
@@ -89,7 +89,7 @@ const items: MenuProps["items"] = [
 
 function Sidebar() {
     return (
-        <aside className="h-screen p-4 border-r-2 border-secondary">
+        <aside className="tw-fixed-sidebar p-4 border-r-2 border-secondary">
             <div id="sidebar" className="flex flex-col justify-between h-full">
                 <div>
                     <Link href="/">
