@@ -1,0 +1,72 @@
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    border: 1px solid transparent;
+    transition: 0.2s ease;
+}
+
+.icon {
+    font-size: 18px;
+    line-height: 0;
+}
+
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+/* Size */
+.mini {
+    font-size: 13px;
+    min-width: 28px;
+    padding: 4px 10px;
+}
+
+.small {
+    font-size: 15px;
+    min-width: 80px;
+    padding: 6px 14px;
+}
+
+.medium {
+    font-size: 16px;
+    min-width: 100px;
+    padding: 10px 12px;
+}
+
+.large {
+    font-size: 15px;
+    min-width: 140px;
+    padding: 14px 16px;
+}
+
+/* Shape */
+.circle {
+    border-radius: 50%;
+}
+
+.circle.medium {
+    min-width: unset;
+    width: 40px;
+    height: 40px;
+}
+
+/* Type */
+.primary {
+    color: #fff;
+    background-color: #fd4070;
+    border-radius: 6px;
+}
+
+.type-default {
+    color: #000;
+    background-color: var(--secondary-btn);
+}
+
+.transparent {
+    color: #000;
+    background-color: transparent;
+}

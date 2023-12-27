@@ -3,9 +3,9 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --primary: #fd4070;
+    --secondary: #f2f2f2;
+    --secondary-btn: #e4e6eb;
 }
 
 body {
@@ -27,6 +27,8 @@ body {
     background-color: #ddd;
 }
 
+/* antd custom */
+
 /* Custom */
 .tw-sidebar-item {
     @apply flex items-center p-3 mb-2 w-full rounded-xl hover:bg-secondary hover:text-black text-black;
@@ -38,4 +40,8 @@ body {
 
 .tw-fixed-sidebar {
     @apply h-screen sticky top-0;
+}
+
+.tw-primary-btn {
+    @apply bg-primary text-white hover:bg-primary hover:text-white;
 }

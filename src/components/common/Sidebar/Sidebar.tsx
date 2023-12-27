@@ -2,13 +2,9 @@
 import Image from "next/image";
 
 import { MdHomeFilled, MdOutlineEmail } from "react-icons/md";
-import {
-    AiOutlineBell,
-    AiOutlineSetting,
-    AiOutlineUser,
-    AiOutlineMenu,
-} from "react-icons/ai";
+import { AiOutlineSetting, AiOutlineUser, AiOutlineMenu } from "react-icons/ai";
 import { VscDiffAdded } from "react-icons/vsc";
+import { PiVideo } from "react-icons/pi";
 import { FiBookmark, FiLogOut, FiSearch } from "react-icons/fi";
 
 import { SidebarItemType } from "@/libs/types/sidebar";
@@ -28,6 +24,11 @@ const sidebarItems: SidebarItemType[] = [
         content: "Home",
     },
     {
+        href: "/video",
+        icon: <PiVideo />,
+        content: "Video",
+    },
+    {
         href: "/search",
         icon: <FiSearch />,
         content: "Explore",
@@ -36,11 +37,6 @@ const sidebarItems: SidebarItemType[] = [
         href: "/messages",
         icon: <MdOutlineEmail />,
         content: "Messages",
-    },
-    {
-        href: "/notification",
-        icon: <AiOutlineBell />,
-        content: "Notifications",
     },
     {
         href: "/profile",
@@ -93,7 +89,11 @@ function Sidebar() {
             <div id="sidebar" className="flex flex-col justify-between h-full">
                 <div>
                     <Link href="/">
-                        <Image className="w-[70px] mb-2" src={logoImg} alt="" />
+                        <Image
+                            className="w-[70px] h-auto mb-2"
+                            src={logoImg}
+                            alt=""
+                        />
                     </Link>
                     {sidebarItems.map((item, index) => (
                         <SidebarItem

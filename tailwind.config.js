@@ -11,9 +11,11 @@ module.exports = {
             colors: {
                 primary: "#fd4070",
                 secondary: "#f2f2f2",
-                search: "#eff3f4",
+                input: "#eff3f4",
+                ["secondary-btn"]: "#E4E6EB",
             },
         },
     },
+
     plugins: [],
 };
