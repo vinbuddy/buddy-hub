@@ -22,11 +22,12 @@ function Button({
     size,
     shape = "shape-default",
     iconSize,
+    className,
     ...props
 }: ButtonProps) {
     return (
         <button
-            className={`button-wrapper ${type} ${size} ${shape}`}
+            className={`button-wrapper ${type} ${size} ${shape} ${className}`}
             {...props}
         >
             {leftIcon && (
