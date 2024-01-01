@@ -49,9 +49,9 @@ export async function POST(req: Request) {
     }
 
     // Get the ID and type
-    const eventType = evt.type;
+    const eventType = evt?.type;
 
-    if (eventType == "user.created" || eventType == "user.updated") {
+    if (eventType === "user.created" || eventType === "user.updated") {
         const { id, username, email_addresses, image_url } = evt?.data;
 
         try {
@@ -73,11 +73,12 @@ export async function POST(req: Request) {
                 status: 200,
             });
         } catch (error) {
+            console.error("Error deleting user:", error);
             return new Response("Error occured", { status: 500 });
         }
     }
 
-    if (eventType == "user.deleted") {
+    if (eventType === "user.deleted") {
         const { id } = evt?.data;
 
         try {
@@ -89,6 +90,7 @@ export async function POST(req: Request) {
                 status: 200,
             });
         } catch (error) {
+            console.error("Error deleting user:", error);
             return new Response("Error occured", { status: 500 });
         }
     }
