@@ -15,7 +15,9 @@ function protectedRouteMiddleware(req: NextRequest) {
 
 export default function middleware(req: NextRequest) {
     protectedRouteMiddleware(req);
-    authMiddleware({});
+    authMiddleware({
+        publicRoutes: ["/api/webhooks(.*)"],
+    });
 }
 
 export const config = {
