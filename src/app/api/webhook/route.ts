@@ -52,7 +52,7 @@ export async function POST(req: Request) {
     const eventType = evt.type;
 
     if (eventType == "user.created" || eventType == "user.updated") {
-        const { id, username, email_addresses } = evt?.data;
+        const { id, username, email_addresses, image_url } = evt?.data;
 
         try {
             await fetch(process.env.API_BASE_URL + "/users", {
@@ -63,8 +63,9 @@ export async function POST(req: Request) {
                 },
                 body: JSON.stringify({
                     userId: id,
-                    username,
-                    email: email_addresses,
+                    username: username,
+                    email: email_addresses[0].email_address,
+                    profilePicture: image_url,
                 }),
             });
 
