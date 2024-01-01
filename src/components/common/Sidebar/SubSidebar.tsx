@@ -2,6 +2,7 @@ import { Avatar, Space, Tooltip } from "antd";
 
 import { AiOutlineMessage, AiOutlineBell } from "react-icons/ai";
 import Button from "../Button/Button";
+import { UserButton } from "@clerk/nextjs";
 
 function SubSidebar() {
     return (
@@ -43,11 +44,12 @@ function SubSidebar() {
                                 ></Button>
                             </Tooltip>
 
-                            <Avatar
+                            {/* <Avatar
                                 className="cursor-pointer"
                                 size={40}
                                 src="https://lh3.googleusercontent.com/a/AAcHTteNe3gZ6nGtv9uai1rC4IS5WZJ6RK__kCRVDcO4kMM2170=s96-c-rg-br100"
-                            />
+                            /> */}
+                            <UserButton />
                         </Space>
                     </div>
                 </div>

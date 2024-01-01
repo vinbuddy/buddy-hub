@@ -27,6 +27,21 @@ body {
     background-color: #ddd;
 }
 
+/* custom clerk */
+.cl-internal-b3fm6y {
+    display: none !important;
+}
+button[data-localization-key="formButtonPrimary"] {
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 0;
+}
+button[data-localization-key="formButtonPrimary"]:hover {
+    background-color: var(--primary);
+    color: #fff;
+    line-height: 0;
+}
+
 /* antd custom */
 
 /* Custom */
