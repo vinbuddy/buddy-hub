@@ -53,13 +53,13 @@ export async function POST(req: Request) {
 
     if (eventType === "user.created" || eventType === "user.updated") {
         const { id, username, email_addresses, image_url } = evt?.data;
+        console.log("id: ", id);
 
         try {
-            await fetch(process.env.API_BASE_URL + "/users", {
+            let response = await fetch(process.env.API_BASE_URL + "/users", {
                 method: "POST",
                 headers: {
                     Accept: "application/json",
-                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify({
                     userId: id,
